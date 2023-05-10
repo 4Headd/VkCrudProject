@@ -7,4 +7,6 @@
 ## Используемые сущности:
 - пользователь с id, логином, паролем, датой регистрации, id группы, id статуса: user(id, login, password, created_date, user_group_id, user_state_id);
 - группа пользователя с id, обозначением (возможные значения: Admin, User), описанием: user_group(id, code, description);
-- статус пользователя с id, обозначением (возможные значения: Active, Blocked), описанием: user_state(id, code, description);
+- статус пользователя с id, обозначением (возможные значения: Active, Blocked), описанием: user_state(id, code, description).
+
+Основной функционал покрыт unit-тестами с помощью xUnit.
