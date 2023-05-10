@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Libraries.Authentication.Attributes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -88,6 +89,7 @@ namespace VkCrudProject.Controllers
         }
 
         [HttpPut]
+        [BasicAuthorization]
         public async Task<ActionResult> BlockUser(uint id)
         {
             if (await _userRepository.BlockUserAsync(id))
